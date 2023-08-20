@@ -1,5 +1,11 @@
 pipeline {
     agent any
+
+    environment {
+        registry = ""
+        registryCredential = 'dockerhub'
+    }
+
     stages {
         stage('Fetch code'){
             steps {
@@ -8,13 +14,19 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "python3 app.py 'olar System'"
+                sh "python3 app.py 'Solar System'"
             }
         }
         stage('Test') {
             steps {
                 sh "python3 test.py"
             }
+        }
+        stage('Push artifacts') {
+            
+        }
+        stage('Build docker image') {
+
         }
     }
 }
