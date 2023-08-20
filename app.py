@@ -11,10 +11,10 @@ def main( *args, **kwargs):
     """
     only the first arg is used 
     """
+    # BUG: causes IndexError when no arg given
+    # name = args[0]
 
-    name = args[0]
-
-# FIX: for no given parameters
+    # FIX: for no given parameters
     try:
         name = args[0][0]
     except IndexError:
