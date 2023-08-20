@@ -18,9 +18,9 @@ def main( *args, **kwargs):
     #try:
     #    name = args[0][0]
     #except IndexError:
-    #    name = "world"
+    #    name = "World"
 
-    print("HELLO, %s" %name)
+    print("HELLO, %s" % name)
 
     return 0
 
