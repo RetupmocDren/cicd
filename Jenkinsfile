@@ -5,9 +5,7 @@ pipeline {
 
         registryCredential = 'dockerhub'
     }
-    
-    def img
-    
+ 
     stages {
 
         stage('Fetch code'){
@@ -30,7 +28,7 @@ pipeline {
         
         stage('Build docker image') {
             steps {
-                img = docker.build('app-image:${env.BUILD_ID}')
+                docker.build('app-image:${env.BUILD_ID}')
 //                sh "docker push 'app-image:${env.BUILD_ID}'"
             }
         }
