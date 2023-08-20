@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build')
+        stage('Build'){
             steps {
                 sh python app.py "Solar System"
             }
