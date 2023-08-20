@@ -24,8 +24,8 @@ pipeline {
         }
         stage('Build and push docker image') {
             steps {
-                sh "docker build -t 'app-image:${env.BUILD_ID}'"
-                sh "docker push 'app-image:${env.BUILD_ID}'"
+                sh "docker build 'app-image:${env.BUILD_ID}'"
+//                sh "docker push 'app-image:${env.BUILD_ID}'"
             }
         }
     }
