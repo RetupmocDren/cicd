@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh python3 app.py "Solar System"
+                sh "python3 app.py 'olar System'"
             }
         }
         stage('Test') {
             steps {
-                sh python3 test.py
+                sh "python3 test.py"
             }
         }
     }
