@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Push docker image') {
             steps {
-                sh "docker push 'retupmocdren/app-image:${env.BUILD_ID}'"
+                sh "docker push 'retupmocdren/cicd/app-image:${env.BUILD_ID}'"
             }
         }
     }
