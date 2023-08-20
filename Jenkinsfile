@@ -28,12 +28,12 @@ pipeline {
         
         stage('Build docker image') {
             steps {
-                sh "docker build -t 'retupmocdren/app-image:${env.BUILD_ID}' ."
+                sh "docker build -t 'retupmocdren/cicd:${env.BUILD_ID}' ."
             }
         }
         stage('Push docker image') {
             steps {
-                sh "docker push 'retupmocdren/cicd/app-image:${env.BUILD_ID}'"
+                sh "docker push 'retupmocdren/cicd:${env.BUILD_ID}'"
             }
         }
     }
