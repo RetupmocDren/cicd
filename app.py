@@ -16,7 +16,7 @@ def main( *args, **kwargs):
 
     # FIX: for no given parameters
     try:
-        name = args[0][0]
+        name = args[0]
     except IndexError:
         name = "World"
 
