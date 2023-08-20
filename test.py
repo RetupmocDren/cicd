@@ -15,7 +15,7 @@ def test():
 
     # test with arg
     print("Test with arg: ")
-    app.main("World")
+    app.main("Jan and Rafael")
 
     # test with no arg
     # ERROR will be indicated by a raised exception
