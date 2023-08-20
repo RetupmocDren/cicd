@@ -28,7 +28,7 @@ def main( *args, **kwargs):
 
 if __name__ == "__main__":
     try:
-        # only args will be processed
+        # only 1st arg will be processed
         main(sys.argv[1])
     except IndexError:
         # if no arg is given
