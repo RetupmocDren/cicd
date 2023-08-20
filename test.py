@@ -12,19 +12,16 @@ def test():
     """
     simple smoke test... does it work?
     """
-    try:
-        # test with arg
-        print("Test with arg: ")
-        app.main("World")
 
-        # test with no arg
-        print("\nTest without arg: ")
-        app.main()
-    except Exception:
-        print(sys.exc_info())
-        return 0
+    # test with arg
+    print("Test with arg: ")
+    app.main("World")
+
+    # test with no arg
+    # ERROR will be indicated by a raised exception
+    print("\nTest without arg: ")
+    app.main()
     
-    return 1
 
 #-------------------------------------------------------------------------------
 
