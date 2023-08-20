@@ -15,10 +15,10 @@ def main( *args, **kwargs):
     name = args[0]
 
 # FIX: for no given parameters
-#    try:
-#        name = args[0][0]
-#    except IndexError:
-#        name = "world"
+    try:
+        name = args[0][0]
+    except IndexError:
+        name = "world"
 
     print("HELLO, %s" %name)
 
