@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        registry = ""
+
         registryCredential = 'dockerhub'
     }
 
@@ -22,11 +22,9 @@ pipeline {
                 sh "python3 test.py"
             }
         }
-        stage('Push artifacts') {
-            
-        }
-        stage('Build docker image') {
-
+        stage('Build and push docker image') {
+            def customImage = docker.build("app-image:$env.BUILD_ID")
+            customImage.push()
         }
     }
 }
