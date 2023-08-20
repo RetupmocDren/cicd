@@ -6,5 +6,6 @@ pipeline {
             steps {
                 sh python app.py "Solar System"
             }
+        }
     }
 }
