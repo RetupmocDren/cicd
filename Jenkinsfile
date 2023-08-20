@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                step {
-                    sh python app.py "Solar System"
-                }
+                python app.py "Solar System"
             }
         }
     }
