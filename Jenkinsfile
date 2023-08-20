@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Fetch code'){
             steps {
@@ -9,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                python3 app.py "Solar System"
+                sh python3 app.py "Solar System"
             }
         }
         stage('Test') {
             steps {
-                python3 test.py
+                sh python3 test.py
             }
         }
     }
