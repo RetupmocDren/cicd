@@ -23,8 +23,8 @@ pipeline {
             }
         }
         stage('Build and push docker image') {
-            def customImage = docker.build("app-image:$env.BUILD_ID")
-            customImage.push()
+            sh "docker build -t 'app-image:${env.BUILD_ID}'"
+            sh "docker push 'app-image:${env.BUILD_ID}'"
         }
     }
 }
