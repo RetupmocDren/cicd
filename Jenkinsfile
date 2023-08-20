@@ -31,5 +31,10 @@ pipeline {
                 sh "docker push 'retupmocdren/cicd:${env.BUILD_ID}'"
             }
         }
+//        stage('Deploy docker image') {
+//            steps {
+//                e.g. within an k8s
+//            }
+//        }
     }
 }
