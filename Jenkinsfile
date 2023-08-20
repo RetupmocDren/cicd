@@ -5,10 +5,11 @@ pipeline {
 
         registryCredential = 'dockerhub'
     }
-
+    
+    def img
+    
     stages {
-        def img
-        
+
         stage('Fetch code'){
             steps {
                 git branch: 'main', url: 'https://github.com/RetupmocDren/cicd.git'
