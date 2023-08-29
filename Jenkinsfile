@@ -33,7 +33,7 @@ pipeline {
         }
 //        stage('Deploy docker image') {
 //            steps {
-//                e.g. within an k8s
+//                e.g. within a k8s
 //            }
 //        }
     }
