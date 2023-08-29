@@ -14,8 +14,18 @@ def test():
     """
 
     # test with arg
-    print("Test with arg: ")
-    app.main("Jan and Rafael")
+    print("Test with arg: 'Patrick Böttner'")
+    app.main("Patrick Böttner")
+
+    print("Test with arg: 'Heike Bretschner'")
+    app.main("Heike Bretschner")
+
+    print("Test with arg: 'Georgi Nikolov'")
+    app.main("Georgi Nikolov")
+
+    print("Test with arg: 'Sara Gnauck'")
+    app.main("Sara Gnauck")
+    
 
     # test with no arg
     # ERROR will be indicated by a raised exception
