@@ -1,0 +1,13 @@
+# a place for tmp stuff
+tmp/
+
+# certs and secrets
+*.cer
+*.crt
+*.pem
+*.p7b
+*.key
+*.csr
+*.pfx
+*token*
+*secret*.*
